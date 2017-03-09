@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://dev.knoema.com/app-script?version=1.0"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>	
+	<script type="text/javascript" src="js/ftt.js"></script>	
+	<script type="text/javascript" src="js/charts.js"></script>	
+	<script type="text/javascript">		
+		Knoema.Helpers.ready(function () {
+			var app = new apps.forecastTrackingTool();
+			app.loadCountries();
+			app.loadIndicators();							
+		});	
+	</script>
+	<link rel="stylesheet" href="css/site.css" type="text/css" />
+	<title>Forecast Tracking Tool</title>
+</head>
+<body>
+	<div id="app-holder">
+		<div id="ftt-selection">
+			<div>
+				<a href="index.html">Back</a></div>
+			<table>
+				<tr>
+					<td>
+						<h3>
+							Select country</h3>
+					</td>
+					<td>
+						<h3>
+							Select indicator</h3>
+					</td>
+				</tr>
+				<tr>
+					<td id="left">
+						<div id="filter">
+							<label for="selection-filter">
+								Filter:</label>
+							<input type="text" id="selection-filter" /></div>
+						<div id="countries">
+						</div>
+					</td>
+					<td id="right">
+						<div id="indicators">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
