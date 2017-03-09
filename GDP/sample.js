@@ -57,7 +57,7 @@ $('#reset_everything').click(function()
 		var country = event.target.value;
 		var array_final = [];
 
-				$.getJSON('https://api.worldbank.org/countries/' + 
+				$.getJSON('http		://api.worldbank.org/countries/' + 
 					country + '/indicators/NY.GDP.MKTP.KD.ZG?per_page=30&MRV=30&format=jsonP&prefix=?',
 					
 					function(json) {
