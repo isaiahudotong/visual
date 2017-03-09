@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://dev.knoema.com/app-script?version=1.0"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>	
+	<script type="text/javascript" src="js/ftt.js"></script>	
+	<script type="text/javascript" src="js/charts.js"></script>	
+	<script type="text/javascript">		
+		Knoema.Helpers.ready(function () {
+			var app = new apps.forecastTrackingTool();
+			app.list();						
+		});	
+	</script>
+	<link rel="stylesheet" href="css/site.css" type="text/css" />
+	<title>Forecast Tracking Tool</title>
+</head>
+<body>
+	<div id="app-holder">
+		<div id="ftt-explore">
+			<div id="header">
+				<a href="javascript:history.go(-1)">Back</a>
+				<div>
+					&nbsp;
+				</div>
+			</div>
+			<div id="filter">
+				<label for="explore-filter">
+					Filter:</label>
+				<input type="text" id="explore-filter" />
+			</div>
+			<div id="tabs" style="display: none">
+				<ul>
+					<li class="active">List</li><li>Table</li><li>Map</li>
+				</ul>
+			</div>
+			<div>
+				<div id="list" class="tab-content">
+					<div id="parameter">
+						<div class="country">
+							<div>
+								&nbsp;
+							</div>
+						</div>
+						<div id="countries">
+						</div>
+					</div>
+					<div id="agency">
+						<div class="country">
+							<b>Agency</b></div>
+						<div id="agencies">
+						</div>
+					</div>
+					<div id="horizon">
+						<div class="country">
+							<b>Horizon</b></div>
+						<div id="horizons">
+						</div>
+					</div>
+				</div>
+				<div class="tab-content hidden" id="table">
+					<div id="statistics">
+						<div id="legend-header">
+							Best forecast accuracy
+							<div id="tableLegend">
+							</div>
+						</div>
+						<div id="statisticsOneYear">
+						</div>
+						<div id="statisticsTwoYears">
+						</div>
+					</div>
+					<table style="display: none;">
+						<tr>
+							<th style="width: 60%">
+								Country
+							</th>
+							<th style="width: 20%">
+								1 year
+							</th>
+							<th style="width: 20%">
+								2 years
+							</th>
+						</tr>
+					</table>
+				</div>
+				<div class="tab-content hidden" id="map">
+					<div id="map-header">
+						Mean absolute error (MAE) <span class="selected">1 year</span> / <span>2 years</span>
+						<div>
+						</div>
+					</div>
+					<div id="ftt-map">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
