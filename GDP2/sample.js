@@ -52,7 +52,7 @@ $(function(){
 			// var hello = 'http://api.worldbank.org/countries/' + country + '/indicators/NY.GDP.MKTP.KD.ZG?per_page=30&MRV=30&format=jsonP&prefix=?';
 			// console.log(hello);
 			//http://api.worldbank.org/countries/BWA/indicators/NY.GDP.MKTP.KD.ZG?per_page=30&MRV=30&format=jsonP&prefix=?
-			$.getJSON('http://api.worldbank.org/countries/' + 
+			$.getJSON('https://api.worldbank.org/countries/' + 
 				country + '/indicators/NY.GDP.MKTP.KD.ZG?per_page=30&MRV=30&format=jsonP&prefix=?',
 				function(json) {
 					$.each(json[1],function(i,data){
